@@ -18,6 +18,7 @@ struct Number
   Number(int xPos, int yPos, int val) : x(xPos),
                                         y(yPos),
                                         value(val) {}
+  ~Number() {}
   int x;
   int y;
   int value;
@@ -46,7 +47,7 @@ void clearScreen(short int x, short int y)
 
   FillConsoleOutputAttribute(stdOutHandle,
                              FOREGROUND_GREEN |
-                             FOREGROUND_RED |
+                             FOREGROUND_RED   |
                              FOREGROUND_BLUE,
                              screen.dwSize.X * screen.dwSize.Y,
                              topLeft,
