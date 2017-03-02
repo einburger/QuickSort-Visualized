@@ -137,14 +137,13 @@ int main()
   unique_number_ptr_vector numArray;
   std::string garbage;
 
-
   /* hide console cursor */
   CONSOLE_CURSOR_INFO info;
   info.dwSize = 100;
   info.bVisible = false;
   SetConsoleCursorInfo(stdOutHandle, &info);
 
- /* change font size */
+  /* change font size */
   COORD fontsize = { FONT_SIZE, FONT_SIZE };
   CONSOLE_FONT_INFOEX font = { sizeof(CONSOLE_FONT_INFOEX) };
   GetCurrentConsoleFontEx(stdOutHandle, false, &font);
