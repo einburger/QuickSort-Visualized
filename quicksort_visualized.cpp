@@ -41,9 +41,9 @@ void clearScreen(short int x, short int y)
   GetConsoleScreenBufferInfo(stdOutHandle, &screen);
   FillConsoleOutputCharacterA(stdOutHandle,
                              ' ',
-                            screen.dwSize.X * screen.dwSize.Y,
-                            topLeft,
-                            &written);
+                             screen.dwSize.X * screen.dwSize.Y,
+                             topLeft,
+                             &written);
 
   FillConsoleOutputAttribute(stdOutHandle,
                              FOREGROUND_GREEN |
