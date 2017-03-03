@@ -3,13 +3,6 @@
 #include <random>
 #include <vector>
 
-if ()
-{
-	
-        
-	not
-}
-
 // Finds a value in an nxn matrix where n = 2^k by recursing through each of the four
 // quadrants of a 2d plane
 struct COORD
