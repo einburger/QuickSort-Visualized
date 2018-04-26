@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 // 1. Counts number of bits that are different between two numbers.
 // 2. The classic fizzbuzz problem [1 - N).
