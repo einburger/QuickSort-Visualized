@@ -3,7 +3,7 @@
 // 1. Counts number of bits that are different between two numbers.
 // 2. The classic fizzbuzz problem [1 - N).
 // 3. Calculates the fibonacci series up to N iterations, but overflows pretty quickly.
-// 4. Iterates through a polygon edge's by the end point pairs
+// 4. Iterates through a polygon edge's by the end point pairs.
 
 int main() 
 {
