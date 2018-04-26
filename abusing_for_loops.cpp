@@ -2,22 +2,13 @@
 
 int main() 
 {
-
-    // fibonacci up to N iterations but overflows pretty quickly
-    for (size_t a{}, b{1}, i{}, N{10}; i < N; std::cout << a << ' ', a = b - a, b = a + b, ++i);
-
-    // number of bits different between two numbers (5 and 8 here)
     int count{};
-    for (int x{5}, y{8}, xy_xor{x^y}; xy_xor; count += 1 & xy_xor, xy_xor >>= 1);
+    /* 1. */ for (int x{5}, y{8}, count{}, xy_xor{x^y}; xy_xor; count += 1 & xy_xor, xy_xor >>= 1, printf("%s", xy_xor ? "" : std::to_string(count).c_str()) );
+    /* 2. */ for (int i{1}, N{100}; i < N;  printf("%d: %s%s\n", i, i % 3 ? "" : "fizz", i % 5 ? "" : "buzz"), i++);
+    /* 3. */ for (size_t a{}, b{1}, i{}, N{10}; i < N; std::cout << a << ' ', a = b - a, b = a + b, ++i);
 
-    // fizz buzz problem for 1 - 100
-    for (int i{1}, N{100}; i < N; 
-        [&]{ 
-            std::cout << i << ": "; 
-            if (i % 3 == 0) { std::cout << "fizz "; } 
-            if (i % 5 == 0) { std::cout << "buzz "; } 
-            i++;
-        }() );
-
+    // 1. Counts number of bits that are different between two numbers.
+    // 2. The classic fizzbuzz problem up to N.
+    // 3. Calculates the fibonacci series up to N, but overflows pretty quickly.
     return 0;
 }
